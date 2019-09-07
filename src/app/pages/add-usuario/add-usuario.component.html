@@ -1,27 +1,33 @@
 <section class="container">
-    <form>
+    <form #fc=ngForm (ngSubmit)="onsubmit(fc)">
         <div class="form-group">
             <label for=""></label>
-            <input type="text" class="form-control" [(ngModel)]="usuario.nome" placeholder="nome">
+            <input type="text" class="form-control" [(ngModel)]="usuario.nome" placeholder="nome" name="nome" required>
             <small class="form-text text-muted"></small>
         </div>
 
         <div class="form-group">
             <label for=""></label>
-            <input type="email" class="form-control" [(ngModel)]="usuario.email" placeholder="E-mail">
+            <input type="email" class="form-control" [(ngModel)]="usuario.email" placeholder="E-mail" name="email" required>
             <small class="form-text text-muted"></small>
         </div>
 
         <div class="form-group">
             <label for=""></label>
-            <input type="password" class="form-control" [(ngModel)]="usuario.pws" placeholder="senha">
-            <small class="form-text text-muted"></small>
+            <input type="password" class="form-control" [(ngModel)]="usuario.pws" placeholder="senha" name="pws" required minlength="6" #pws="ngModel">
+            <small class="form-text text-danger" *ngIf="pws.invalid">senha muito curta</small>
         </div>
-            
+
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Salvar</button>
-            <button type="reset" class="btn btn-primary">Cancelar</button>
-        </div>            
+            <label for=""></label>
+            <input type="password" class="form-control" (ngModel)="conf" placeholder="confirmar senha" name="conf" required #conf="ngModel">
+            <small class="form-text text-danger" *ngIf="pws.value != conf.value">senhas diferentes</small>
+        </div>        
+
+        <div class="form-group text-right">
+            <button type="submit" class="btn btn-primary ml-2" [disabled]="conf.value != pws.value || fc.invalid">Salvar</button>
+            <button type="reset" class="btn btn-primary ml-2">Cancelar</button>
+        </div>
 
     </form>
 </section>
