@@ -9,19 +9,19 @@
         <div class="form-group">
             <label for=""></label>
             <input type="email" class="form-control" [(ngModel)]="usuario.email" placeholder="E-mail" name="email" required>
-            <small class="form-text text-muted"></small>
+            <small class="form-text text-muted "></small>
         </div>
 
         <div class="form-group">
             <label for=""></label>
             <input type="password" class="form-control" [(ngModel)]="usuario.pws" placeholder="senha" name="pws" required minlength="6" #pws="ngModel">
-            <small class="form-text text-danger" *ngIf="pws.invalid">senha muito curta</small>
+            <small class="form-text text-danger" *ngIf="pws.invalid && pws.dirty">senha muito curta</small>
         </div>
 
         <div class="form-group">
             <label for=""></label>
             <input type="password" class="form-control" (ngModel)="conf" placeholder="confirmar senha" name="conf" required #conf="ngModel">
-            <small class="form-text text-danger" *ngIf="pws.value != conf.value">senhas diferentes</small>
+            <small class="form-text text-danger" *ngIf="pws.value != conf.value && pws.dirty">senhas diferentes</small>
         </div>        
 
         <div class="form-group text-right">
