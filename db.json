@@ -1,21 +1,11 @@
 {
   "usuarios": [
     {
-      "id": 0
-    },
-    {
       "ativo": true,
       "nome": "wellington",
       "email": "wellington@gmail.com",
       "pws": "123456",
       "id": 1
-    },
-    {
-      "ativo": true,
-      "nome": "wellington",
-      "email": "thayanegabrielly90092@gmail.com",
-      "pws": "123456",
-      "id": 2
     }
   ]
 }

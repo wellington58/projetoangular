@@ -18,4 +18,8 @@ private db = environment.serverAPI
   save(usuario:Usuario){
    return this.Http.post(this.db+"usuarios",usuario)
   }
+
+  getAll(){
+    return this.Http.get(this.db + "usuarios")
+  }
 }
