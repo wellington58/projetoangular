@@ -12,14 +12,14 @@ export class UsuarioService {
 private db = environment.serverAPI
 
   constructor(
-    protected Http:HttpClient
+    protected http:HttpClient
   ) { }
 
   save(usuario:Usuario){
-   return this.Http.post(this.db+"usuarios",usuario)
+   return this.http.post(this.db+"usuarios",usuario)
   }
 
   getAll(){
-    return this.Http.get(this.db + "usuarios")
+    return this.http.get(this.db + "usuarios")
   }
 }

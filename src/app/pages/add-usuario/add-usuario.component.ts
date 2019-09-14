@@ -26,9 +26,14 @@ export class AddUsuarioComponent implements OnInit {
     this.usuarioService.save(this.usuario)
     .subscribe(
       res=>{
-        console.log("cadastrado com sucesso!",res);   
+        console.log("cadastrado com sucesso!",res);
+        form.reset();
+        //this.router.navigate(["/"])
         alert("cadastrado com sucesso!");   
-        this.router.navigate(["addusuario"])
+        this.router.navigateByUrl('/', { skipLocationChange: true })
+        .then(() => 
+          this.router.navigate(['/addusuario']));
+        //this.router.navigate(["addusuario"])
       },
       error=>{
         console.log("nao cadastrado! ",error);

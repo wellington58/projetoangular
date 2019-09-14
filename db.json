@@ -6,6 +6,34 @@
       "email": "wellington@gmail.com",
       "pws": "123456",
       "id": 1
+    },
+    {
+      "ativo": true,
+      "nome": "wellin",
+      "email": "teste@gmail.com",
+      "pws": "123456",
+      "id": 2
+    }
+  ],
+  "eventos": [
+    {
+      "id": 0
+    },
+    {
+      "ativo": true,
+      "nome": "teste",
+      "tema": "test",
+      "data": "2019-09-13",
+      "hora": "23:59",
+      "id": 1
+    },
+    {
+      "ativo": true,
+      "nome": "wellington",
+      "tema": "acertou",
+      "data": "2019-09-13",
+      "hora": "21:36",
+      "id": 2
     }
   ]
 }
