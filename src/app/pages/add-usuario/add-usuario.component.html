@@ -13,6 +13,12 @@
         </div>
 
         <div class="form-group">
+                <label for=""></label>
+                <input type="text" class="form-control" [(ngModel)]="cep" placeholder="cep" name="cep" required (keyup)="buscaCep()">
+                <small class="form-text text-muted "></small>
+            </div>
+
+        <div class="form-group">
             <label for=""></label>
             <input type="password" class="form-control" [(ngModel)]="usuario.pws" placeholder="senha" name="pws" required minlength="6" #pws="ngModel">
             <small class="form-text text-danger" *ngIf="pws.invalid && pws.dirty">senha muito curta</small>

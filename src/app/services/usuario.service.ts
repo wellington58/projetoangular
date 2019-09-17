@@ -9,17 +9,21 @@ import { environment } from '../../environments/environment';
 })
 export class UsuarioService {
 
-private db = environment.serverAPI
+  private db = environment.serverAPI
 
   constructor(
-    protected http:HttpClient
+    protected http: HttpClient
   ) { }
 
-  save(usuario:Usuario){
-   return this.http.post(this.db+"usuarios",usuario)
+  save(usuario: Usuario) {
+    return this.http.post(this.db + "usuarios", usuario)
   }
 
-  getAll(){
+  getAll() {
     return this.http.get(this.db + "usuarios")
+  }
+
+  getendereço(cep) {
+    return this.http.get("https://viacep.com.br/ws/" + cep + "/json/")
   }
 }
