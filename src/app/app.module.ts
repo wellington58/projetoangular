@@ -10,6 +10,7 @@ import { AddUsuarioComponent } from './pages/add-usuario/add-usuario.component';
 import { ListUsuarioComponent } from './pages/list-usuario/list-usuario.component';
 import { AddEventoComponent } from './pages/add-evento/add-evento.component';
 import { ListEventoComponent } from './pages/list-evento/list-evento.component';
+import { EnderecoComponent } from './pages/endereco/endereco.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ListEventoComponent } from './pages/list-evento/list-evento.component';
     AddUsuarioComponent,
     ListUsuarioComponent,
     AddEventoComponent,
-    ListEventoComponent
+    ListEventoComponent,
+    EnderecoComponent
   ],
   imports: [
     BrowserModule,
