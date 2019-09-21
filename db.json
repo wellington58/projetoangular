@@ -2,8 +2,16 @@
   "usuarios": [
     {
       "ativo": true,
-      "nome": "wellington",
-      "email": "wellington@gmail.com",
+      "endereco": {
+        "error": false,
+        "cep": "26560-542",
+        "logradouro": "Rua Josefina",
+        "localidade": "Mesquita",
+        "bairro": "Santo Elias",
+        "uf": "RJ"
+      },
+      "nome": "wellin",
+      "email": "taianeb294@gmail.com",
       "pws": "123456",
       "id": 1
     }
