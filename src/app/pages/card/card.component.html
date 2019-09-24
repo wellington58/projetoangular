@@ -1,0 +1,15 @@
+<section class="container">
+        <div class="row" *ngIf="eventos | async as users">
+    
+            <div *ngFor="let user of users">
+                <div class="card card-body m-1">
+                    <h5 class="card-title">TITULO DO EVENTO: {{user.nome}}</h5>
+                    <p class="card-text">DESCRIÇÃO DO EVENTO: {{user.tema}}</p>
+                    <p class="card-text">DATA DO EVENTO: {{user.data | date:"dd/MM/yyyy"}}</p>
+                    <p class="card-text">HORARIO DO EVENTO: {{user.hora}}</p>
+                    <a href="perfil" class="btn btn-primary">Visitar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    

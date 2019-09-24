@@ -11,7 +11,7 @@
         "uf": "RJ"
       },
       "nome": "wellin",
-      "email": "taianeb294@gmail.com",
+      "email": "wellingtonteste@gmail.com",
       "pws": "123456",
       "id": 1
     }
@@ -22,10 +22,10 @@
     },
     {
       "ativo": true,
-      "nome": "teste",
-      "tema": "test",
-      "data": "2019-09-13",
-      "hora": "23:59",
+      "nome": "wellington",
+      "tema": "acertou2",
+      "data": "2019-09-23",
+      "hora": "20:20",
       "id": 1
     }
   ]

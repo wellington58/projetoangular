@@ -18,4 +18,13 @@ export class ListEventoComponent implements OnInit {
     this.eventos = this.eventosService.getAll();
   }
 
+  apagar(evento){
+    if(confirm("Apagar os dados do usuario: " + evento.nome + "?")){
+      this.eventosService.delete(evento.id).subscribe(
+        res=>{
+          alert("Usuario apagado!")
+        }
+      )
+    }
+  }
 }

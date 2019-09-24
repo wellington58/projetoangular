@@ -11,6 +11,8 @@ import { ListUsuarioComponent } from './pages/list-usuario/list-usuario.componen
 import { AddEventoComponent } from './pages/add-evento/add-evento.component';
 import { ListEventoComponent } from './pages/list-evento/list-evento.component';
 import { EnderecoComponent } from './pages/endereco/endereco.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
+import { CardComponent } from './pages/card/card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { EnderecoComponent } from './pages/endereco/endereco.component';
     ListUsuarioComponent,
     AddEventoComponent,
     ListEventoComponent,
-    EnderecoComponent
+    EnderecoComponent,
+    PerfilComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

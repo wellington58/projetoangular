@@ -1,14 +1,22 @@
 <section class="container">
-    <div class="row" *ngIf="eventos | async as users">
-
-        <div *ngFor="let user of users">
-            <div class="card card-body m-1">
-                <h5 class="card-title">TITULO DO EVENTO: {{user.nome}}</h5>
-                <p class="card-text">DESCRIÇÃO DO EVENTO: {{user.tema}}</p>
-                <p class="card-text">DATA DO EVENTO: {{user.data | date:"dd/MM/yyyy"}}</p>
-                <p class="card-text">HORARIO DO EVENTO: {{user.hora}}</p>
-                <a href="#" class="btn btn-primary">Visitar</a>
-            </div>
-        </div>
-    </div>
+    <table class="table" *ngIf="eventos | async as users">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>tema</th>
+            <th>data</th>
+            <th>hora</th>
+            <th>/</th>
+            <th>X</th>
+        </tr>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.nome}}</td>
+            <td>{{user.tema}}</td>
+            <td>{{user.data}}</td>
+            <td>{{user.hora}}</td>
+            <td routerLink="/addevento/{{user.id}}">/</td>
+            <td (click)="apagar(user)">x</td>
+        </tr>
+    </table>
 </section>
